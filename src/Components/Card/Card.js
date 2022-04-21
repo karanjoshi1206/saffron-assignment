@@ -26,6 +26,18 @@ const Card = ({ elem }) => {
 					return <img src={image} alt='' key={index} />;
 				})}
 			</div>
+			<div onClick={() => SetSaved(!saved)} className='save hide'>
+				{saved ? (
+					<>
+						<img src='./assets/redHeart.svg' alt='' />
+					</>
+				) : (
+					<>
+						<img src='./assets/heart.svg' alt='' />
+					</>
+				)}
+			</div>
+
 			<div className='cardContent'>
 				<h1>{elem.title}</h1>
 				<div className='cardContent-location'>
